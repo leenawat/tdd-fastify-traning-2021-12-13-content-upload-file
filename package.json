@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "jest --runInBand",
-    "test:coverage": " cross-env NODE_ENV=test jest  --runInBand --coverage",
-    "test:watch": " cross-env NODE_ENV=test jest --watch --runInBand && cross-env NODE_ENV=test npm run clean-up",
+    "test:coverage": "cross-env NODE_ENV=test jest  --runInBand --coverage",
+    "test:watch": "cross-env NODE_ENV=test jest --watch --runInBand",
     "test:watch-verbose": " cross-env NODE_ENV=test jest --watch --runInBand --verbose",
     "start": "cross-env NODE_ENV=develop nodemon",
     "build:ts": "cross-env NODE_ENV=production tsc",
@@ -27,7 +27,9 @@
     "fastify-multer": "^2.0.2",
     "fastify-plugin": "^3.0.0",
     "fastify-sensible": "^3.1.0",
-    "fs": "^0.0.1-security"
+    "file-type": "^17.0.0",
+    "fs": "^0.0.1-security",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/jest": "^27.0.3",
