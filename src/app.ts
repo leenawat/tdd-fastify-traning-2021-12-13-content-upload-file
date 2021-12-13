@@ -11,6 +11,7 @@ const app: FastifyPluginAsync<AppOptions> = async (
   opts,
 ): Promise<void> => {
   // Place here your custom code!
+  fastify.register(require('fastify-multer').contentParser)
 
   // Do not touch the following lines
 
@@ -28,6 +29,13 @@ const app: FastifyPluginAsync<AppOptions> = async (
     dir: join(__dirname, 'routes'),
     options: opts,
   })
+
+  fastify.log.fatal('1 `fatal`')
+  fastify.log.error('2 `error`')
+  fastify.log.warn('3 `warn`')
+  fastify.log.info('4 `info`')
+  fastify.log.debug('5 `debug`')
+  fastify.log.trace('6 `trace`')
 }
 
 export default app
